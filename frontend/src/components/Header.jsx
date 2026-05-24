@@ -10,11 +10,13 @@ function Header() {
         <input type="text" placeholder="Buscar productos" />
         <button>🔍</button>
       </div>
-
+      <button className="btn-primary">iniciar sesión</button>
       <div className="icons">
         <span>🛒</span>
       </div>
     </header>
+
+
   );
 }
 
