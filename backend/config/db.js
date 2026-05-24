@@ -12,4 +12,15 @@ const pool = mysql.createPool({
   queueLimit: 0
 });
 
+// Verificar conexión
+pool.getConnection((err, connection) => {
+  if (err) {
+    console.error('❌ Error conectando a MySQL:', err.message);
+    return;
+  }
+
+  console.log('✅ Conectado correctamente a MySQL');
+
+  connection.release();
+});
 module.exports = pool.promise();

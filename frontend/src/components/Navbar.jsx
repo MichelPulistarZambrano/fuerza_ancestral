@@ -1,21 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <>
-      <div className="topbar">
-        <div className="logo">¡Tu mejor tienda deportiva!</div>
-        <span className="menu-icon">☰</span>
-      </div>
-
-      <nav className="navbar" id="navbar">
-        <a href="#">Mancuernas</a>
-        <a href="#">Pesas</a>
-        <a href="#">Accesorios</a>
-        <a href="#">Ropa</a>
-      </nav>
-    </>
+    <nav className="navbar" id="navbar">
+      {/* Apunta a las IDs reales de tu base de datos (Ej: 1=Pesas/Mancuernas, 2=Ropa) */}
+      <Link to="/categoria/1">Mancuernas & Pesas</Link>
+      <Link to="/categoria/2">Ropa Deportiva</Link>
+      <Link to="/categoria/3">Accesorios</Link>
+      <Link to="/categoria/4">Calzado</Link>
+    </nav>
   );
 }
-
-export default Navbar;
